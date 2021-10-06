@@ -73,6 +73,7 @@ function apostar(){
 
      var divAcertos = document.getElementById("acertos");
      divAcertos.innerHTML = "<h2>Acertos</h2><p>"+qtdAcertos+"</p>"
+     btnApostar.disabled = true;
   }
 }
 
