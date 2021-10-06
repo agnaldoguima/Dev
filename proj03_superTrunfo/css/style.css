@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+*{
+  padding: 0px;
+  margin: 0;
+}
+body {
+    font-family: 'Roboto Mono', monospace;
+    min-height: 854px;
+    background-color: #b50507;
+}
+
+.logo-marvel img{
+  max-width: 350px;
+}
+
+.container {
+    padding: 10px;
+}
+
+.flex-container{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+}
+
+.cards-container{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+#resultado{
+  display: flex;
+  background: #8B0000;
+  width: 320px;
+  align-items:center;
+  justify-content: space-between;
+  height: 40px;
+  border-radius: 20px;
+  padding:0px;
+  margin-bottom: 20px;
+}
+
+#pontosJogador{
+  margin-left: 20px;
+  color:#ffffff;
+}
+#pontosMaquina{
+  margin-right: 20px;
+    color:#ffffff;
+}
+
+#pMaquina, #pJogador, #divisor{
+  color:#ffffff;
+  font-size:30px;
+}
+
+button, .button-jogar, input[type=submit] {
+    padding: 2px 10px;
+    margin: 8px;
+    border-radius: 20px;
+    border: 1px solid dimgray;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    font-size: 1rem;
+    color: #000000;
+    cursor:pointer;
+    font-family: 'Cairo', sans-serif;
+    width:150px;
+}
+button:hover{
+  color: #b50507;
+}
+
+.botoes{
+  display: flex;
+}
+
+.carta-jogador{
+    margin:20px;
+    margin-top: 0px;
+    width: 300px;
+    height:420px;
+    border: 1px solid dimgray;
+    /*background: url("https://i.postimg.cc/CM2rzMrS/cap-america.jpg");*/
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.carta-maquina{   
+    margin:20px;
+    margin-top: 0px;
+    width: 300px;
+    height:420px;
+    border: 1px solid dimgray;
+    /*background: url("https://i.postimg.cc/zvHjnW25/homem-aranha.jpg");*/
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+h2 {
+    color: #fff;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    text-shadow: 2px 2px black;
+  
+}
+
+
+.atributo-ataque{
+  font-family: 'Cairo', sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #b50507;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  width: 290px;
+  margin-left: 4px;
+  margin-top: 265px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  opacity: 75%;
+}
+
+.atributo-defesa{
+  font-family: 'Cairo', sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #b50507;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  width: 290px;
+  margin-left: 4px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  opacity: 75%;
+}
+.atributo-forca{
+  font-family: 'Cairo', sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #b50507;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  width: 290px;
+  margin-left: 4px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  opacity: 75%;
+}
+
+.att-esquerda{
+  background:#ffffff;
+  width: 190px;
+  text-align:left;
+  padding-left: 10px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.att-esquerda input{
+  cursor: pointer;
+}
+
+.att-direita{
+  background-color: #b50507;
+  width: 90px;
+  color: #ffffff;
+  border-radius: 0px 10px 10px 0px;
+}
+s

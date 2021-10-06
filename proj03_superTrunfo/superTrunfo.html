@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Trunfo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="flex-container">
+            <div class="logo-marvel"><img src="https://i.postimg.cc/jStHjGTR/marvel.png" alt=""></div> 
+            <div id="resultado">
+            <div id="pontosJogador">JOGADOR&nbsp;&nbsp;</div>
+            <div id="pJogador"></div>
+            <div id="divisor"> : </div>
+            <div id="pMaquina"></div>
+            <div id="pontosMaquina">COMPUTADOR</div>
+            </div>
+            <div class="cards-container" id="cartasContainer">   
+        </div>
+        <div class="botoes">
+            <input type="submit" value="SORTEAR CARTA" onclick="sortearCarta()" id="btnSortear">
+            <input type="hidden" class="button-jogar"  value="JOGAR" onclick="jogar()" id="btnJogar">
+            <input type="hidden"  value="NOVA PARTIDA"  id="btnNovaPartida" onclick="novaPartida()">
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
