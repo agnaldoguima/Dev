@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    text-align:center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+}
+
+.container{
+    max-width: 400px;
+    min-height: 600px;
+    border: 2px solid #008000;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0 4px 8px  0 rgba( 0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+Header{
+    height: 100px;
+}
+header img{
+    height: 100%;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+
+main{
+    padding: 5px;
+    background: #EEE8AA;
+    min-height: 250px; 
+}
+
+main button{
+    cursor: pointer;
+    background: transparent;
+    border: 0px;
+    color: #ff0000;
+    font-size: 1.0em;
+    margin: 3px;
+    margin-top: 15px;
+}
+
+main button:target {
+    background-color: #008000;
+}
+
+.estatisticas{
+    padding: 5px;
+    height: 80px;
+}
+#btnApostar{
+    margin: 15px;
+    cursor: pointer;
+    width: 130px;
+    height: 40px;
+    font-size: 1.5em;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-weight: 500;
+    border-radius: 6px;
+    border: 1px solid #008000;
+    color:#008000;
+    box-shadow: 0 4px 8px  0 rgba( 0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+#btnApostar:hover{
+    border: 2px solid #008000;
+}
+
+#btnApostar:hover:disabled{
+    cursor: not-allowed;
+}
+
+.valorAposta{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-weight: 600;
+    color: dimgray;
+}
+
+.valorAposta #valor{
+    border-radius: 15px;
+    padding:5px;
+    color: #FF0000;
+    font-size: 1.2em;
+}
+
+.resultado{
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    height: 55px;
+}
+
+.resultado .resultadoCirle{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    font-size: 1.8em;
+    color: #ffffff;
+    background: #009e4c;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px  0 rgba( 0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+footer{
+    font-family: 'Gemunu Libre', sans-serif;
+    font-weight: 600;
+    color: dimgray;
+}
+
+footer p{
+    border-radius: 15px;
+    padding:5px;
+    color: #FF0000;
+    font-size: 1.2em;
+}
+
+@media (max-width:390px){ 
+    main button{
+        margin: 15px 1px 3px 1px;   
+    }
+}
