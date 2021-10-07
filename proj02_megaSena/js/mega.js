@@ -41,22 +41,21 @@ function selecionarNumeros(numero){
           btnApostar.disabled = false;
           // mostrar o valor da aposta na tela 
           valorDaAposta()
-       }  
+       }
+
+       // mostra a quantidade de números escolhidos
+       var qtdapostas = document.getElementById("qtdNumeros")
+       qtdapostas.innerHTML = "<p>Qtd Números</p><p class='valor'>" + numerosApostados.length + "</p>";
      } 
 }
 
 function desabilitarNumeroEscolhido(numero){
-  document.getElementById('num_' + numero).style.backgroundColor = "#000000";
-  document.getElementById('num_' + numero).style.color = "#000000";
+  document.getElementById('num_' + numero).style.backgroundColor = "#008000";
+  document.getElementById('num_' + numero).style.color = "#ffffff";
   document.getElementById('num_' + numero).disabled = true;
 }
 
-
 function apostar(){
-  if(numerosApostados.length < 6){
-       alert("Escolha pelo menos 6 números")
-  }
-  else{
      //fazer a aposta -- comparar os números sorteados com os apostados
      for(i = 0; i < numerosApostados.length; i++){
           for(j = 0; j < resultado.length; j++){
@@ -72,9 +71,10 @@ function apostar(){
      }
 
      var divAcertos = document.getElementById("acertos");
-     divAcertos.innerHTML = "<h2>Acertos</h2><p>"+qtdAcertos+"</p>"
+     divAcertos.innerHTML = "<p>Acertos</h2><p class='valor'>"+qtdAcertos+"</p>"
      btnApostar.disabled = true;
-  }
+
+     desabilitaTodosNumeros()
 }
 
 function valorDaAposta(){
@@ -115,7 +115,14 @@ function valorDaAposta(){
                  break;
        }
        var divValorAposta = document.getElementById("valor");
-       divValorAposta.innerHTML = "<p>Valor da Aposta</p><p id='valor'>" + valorAposta + "</p>"
+       divValorAposta.innerHTML = "<p>Valor da Aposta</p><p class='valor'>" + valorAposta + "</p>"
 
 }
+
+function desabilitaTodosNumeros(){
+     for(i = 1; i <= 60; i++){
+          document.getElementById("num_" + i).disabled = true;
+     }
+}
+
 //funções ----------------------------------------------fim

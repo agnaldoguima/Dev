@@ -47,13 +47,16 @@ main button{
     font-size: 1.0em;
     margin: 3px;
     margin-top: 15px;
+    border-radius: 3px;
+    border: 1px solid #008000;
+    padding: 3px;
 }
 
-main button:target {
-    background-color: #008000;
+main button:hover:disabled{
+    cursor: not-allowed;
 }
 
-.estatisticas{
+.apostar{
     padding: 5px;
     height: 80px;
 }
@@ -79,23 +82,6 @@ main button:target {
     cursor: not-allowed;
 }
 
-.valorAposta{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    flex-direction: column;
-    font-family: 'Gemunu Libre', sans-serif;
-    font-weight: 600;
-    color: dimgray;
-}
-
-.valorAposta #valor{
-    border-radius: 15px;
-    padding:5px;
-    color: #FF0000;
-    font-size: 1.2em;
-}
-
 .resultado{
     display: flex;
     justify-content: space-around;
@@ -118,16 +104,27 @@ main button:target {
 }
 
 footer{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
     font-family: 'Gemunu Libre', sans-serif;
     font-weight: 600;
     color: dimgray;
+    font-size: 1.2em;
+    padding:15px;
+}
+footer #valor{
+    border-right: 1px solid #008000;
+    padding-right: 10px;
+}
+footer #acertos{
+    border-left: 1px solid #008000;
+    padding-left: 10px;
 }
 
-footer p{
-    border-radius: 15px;
-    padding:5px;
+footer .valor{
     color: #FF0000;
-    font-size: 1.2em;
 }
 
 @media (max-width:390px){ 
