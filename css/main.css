@@ -20,11 +20,11 @@ header {
   padding: 20px;
   padding-left: 40px;
   margin-bottom: 0px;
-  height: 90px;
+  height: 100px;
 }
 
 header img{
-max-width: 130px;
+max-width: 150px;
 border-radius: 50%;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -43,12 +43,12 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 0px;
   border-radius: 10px;
   color:DimGray;
-  width: 200px;
+  width: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 div.box:hover {
-  opacity: 0.6;
+  filter: brightness(50%);
 }
 
 .box p {
@@ -63,9 +63,9 @@ div.box:hover {
 }
 
 footer{
-  grid-area:footer;
   text-align: center;
   color:DimGray;
   font-size: 12px;
+  margin-bottom: 20px;
 }
 
