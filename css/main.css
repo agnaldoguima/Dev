@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&display=swap');
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Yaldevi', sans-serif;
+}
+
+body{
+  background-color: #EEE9E9;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e31e26;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+  padding-left: 40px;
+  margin-bottom: 0px;
+  height: 90px;
+}
+
+header img{
+max-width: 130px;
+border-radius: 50%;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.box {
+  text-align: center;
+  margin: 30px;
+  padding: 0px;
+  border-radius: 10px;
+  color:DimGray;
+  width: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.box:hover {
+  opacity: 0.6;
+}
+
+.box p {
+  padding: 3px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.box img{
+  width:100%; 
+  border-radius: 10px 10px 0px 0px;
+}
+
+footer{
+  grid-area:footer;
+  text-align: center;
+  color:DimGray;
+  font-size: 12px;
+}
+
