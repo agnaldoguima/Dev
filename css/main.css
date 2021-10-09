@@ -23,11 +23,20 @@ header {
   height: 100px;
 }
 
-header img{
+header .imgAvatar{
 max-width: 150px;
 border-radius: 50%;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+header .redesSociais{
+  margin-top: -90px;
+  }
+
+header .redesSociais img{
+    max-height: 20px;
+    margin-right: 10px;
+    }
 
 .box-container{
   display: flex;
@@ -105,7 +114,11 @@ footer{
 
 @media (max-width:576px){ 
   header{
-    justify-content: center;  
+    justify-content: center; 
   }
+
+  header .redesSociais{
+    display: none;
+    }
 }
 
