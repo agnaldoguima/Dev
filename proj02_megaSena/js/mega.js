@@ -18,11 +18,11 @@ sortearNumeros();
 function sortearNumeros(){
   for(var i = 0; i < 6; i++) {    
        // Sorteando os números do jogo
-      var numeroSorteado = Math.round(Math.random() * 61);
+      var numeroSorteado = Math.round(Math.random() * 60 + 1);
        
         // verifica se o numero sorteado exixte na lista, enquanto exixtir ele vai ficar sorteando um novo número
       while(resultado.includes(numeroSorteado)){
-          numeroSorteado = Math.round(Math.random() * 61);
+          numeroSorteado = Math.round(Math.random() * 60 + 1);
       }
       resultado.push(numeroSorteado);//insere o numero sorteado na lista
   }
