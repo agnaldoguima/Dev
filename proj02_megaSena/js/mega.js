@@ -71,7 +71,7 @@ function apostar(){
      }
 
      var divAcertos = document.getElementById("acertos");
-     divAcertos.innerHTML = "<p>Acertos</h2><p class='valor'>"+qtdAcertos+"</p>"
+     divAcertos.innerHTML = "<p>Acertos<p class='valor'>"+qtdAcertos+"</p>"
      btnApostar.disabled = true;
 
      desabilitaTodosNumeros()

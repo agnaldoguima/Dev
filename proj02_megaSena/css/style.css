@@ -56,11 +56,9 @@ main button:hover:disabled{
     cursor: not-allowed;
 }
 
-.apostar{
+#btnApostar{
     padding: 5px;
     height: 80px;
-}
-#btnApostar{
     margin: 15px;
     cursor: pointer;
     width: 130px;
