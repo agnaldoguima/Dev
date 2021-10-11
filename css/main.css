@@ -24,9 +24,9 @@ header {
 }
 
 header .imgAvatar{
-max-width: 150px;
-border-radius: 50%;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-width: 150px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 header .redesSociais{
@@ -34,9 +34,13 @@ header .redesSociais{
   }
 
 header .redesSociais img{
-    max-height: 20px;
-    margin-right: 10px;
-    }
+  max-height: 20px;
+  margin-right: 10px;
+}
+
+header .redesSociais img:hover{
+  opacity: 50%;
+}
 
 .box-container{
   display: flex;
@@ -51,7 +55,6 @@ header .redesSociais img{
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: column;
-
   text-align: center;
   margin: 30px;
   padding: 0px;
@@ -72,15 +75,17 @@ header .redesSociais img{
   color: #e31e26;
   font-weight: 800;
 }
+
 .box p {
   padding: 3px;
   font-size: 14px;
   font-weight: 800;
   padding: 10px;
 }
+
 .box p a{
- text-decoration: none;
- color: #e31e26;
+  text-decoration: none;
+  color: #e31e26;
 }
 
 .box img{
@@ -119,6 +124,6 @@ footer{
 
   header .redesSociais{
     display: none;
-    }
+  }
 }
 
