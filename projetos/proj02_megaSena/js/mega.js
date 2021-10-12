@@ -18,11 +18,11 @@ sortearNumeros();
 function sortearNumeros(){
   for(let i = 0; i < 6; i++) {    
        // Sorteando os números do jogo
-      let numeroSorteado = Math.round(Math.random() * 60 + 1);
+      let numeroSorteado = Math.round(Math.random() * 59 + 1);
        
         // verifica se o numero sorteado exixte na lista, enquanto exixtir ele vai ficar sorteando um novo número
       while(resultado.includes(numeroSorteado)){
-          numeroSorteado = Math.round(Math.random() * 60 + 1);
+          numeroSorteado = Math.round(Math.random() * 59 + 1);
       }
       resultado.push(numeroSorteado);//insere o numero sorteado na lista
   }
@@ -50,7 +50,7 @@ function selecionarNumeros(numero){
 }
 
 function desabilitarNumeroEscolhido(numero){
-  document.getElementById('num_' + numero).style.backgroundColor = "#008000";
+  document.getElementById('num_' + numero).style.backgroundColor = "#009e4c";
   document.getElementById('num_' + numero).style.color = "#ffffff";
   document.getElementById('num_' + numero).disabled = true;
 }
@@ -124,5 +124,4 @@ function desabilitaTodosNumeros(){
           document.getElementById("num_" + i).disabled = true;
      }
 }
-
 //funções ----------------------------------------------fim
