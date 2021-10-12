@@ -1,9 +1,9 @@
 //declaração de variáveis-----------------------------inicio
-var numerosApostados = [];
-var resultado = [];
-var numeroSorteado = 0;
-var valorAposta;
-var qtdAcertos = 0;
+const numerosApostados = [];
+const resultado = [];
+let numeroSorteado = 0;
+let valorAposta;
+let qtdAcertos = 0;
 //declaração de variáveis--------------------------------fim
 
 const btnApostar = document.querySelector("#btnApostar");
@@ -16,9 +16,9 @@ sortearNumeros();
 
 //funções --------------------------------------------inicio
 function sortearNumeros(){
-  for(var i = 0; i < 6; i++) {    
+  for(let i = 0; i < 6; i++) {    
        // Sorteando os números do jogo
-      var numeroSorteado = Math.round(Math.random() * 60 + 1);
+      let numeroSorteado = Math.round(Math.random() * 60 + 1);
        
         // verifica se o numero sorteado exixte na lista, enquanto exixtir ele vai ficar sorteando um novo número
       while(resultado.includes(numeroSorteado)){
@@ -44,7 +44,7 @@ function selecionarNumeros(numero){
        }
 
        // mostra a quantidade de números escolhidos
-       var qtdapostas = document.getElementById("qtdNumeros")
+       const qtdapostas = document.getElementById("qtdNumeros")
        qtdapostas.innerHTML = "<p>Qtd Números</p><p class='valor'>" + numerosApostados.length + "</p>";
      } 
 }
@@ -65,12 +65,12 @@ function apostar(){
           }
      }
      //  mostrar o resultado
-     var divResultado = document.getElementById("resultado");
+     const divResultado = document.getElementById("resultado");
      for(i=0; i < resultado.length; i++){
           divResultado.innerHTML += "<div class='resultadoCirle'>"+ resultado[i] +"</div>"
      }
 
-     var divAcertos = document.getElementById("acertos");
+     let divAcertos = document.getElementById("acertos");
      divAcertos.innerHTML = "<p>Acertos<p class='valor'>"+qtdAcertos+"</p>"
      btnApostar.disabled = true;
 
@@ -114,7 +114,7 @@ function valorDaAposta(){
                  valorAposta = "R$ 0,00";
                  break;
        }
-       var divValorAposta = document.getElementById("valor");
+       const divValorAposta = document.getElementById("valor");
        divValorAposta.innerHTML = "<p>Valor da Aposta</p><p class='valor'>" + valorAposta + "</p>"
 
 }
