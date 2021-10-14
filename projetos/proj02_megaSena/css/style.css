@@ -126,7 +126,13 @@ footer .valor{
 }
 
 @media (max-width:390px){ 
+    .container{
+        min-height: 450px;
+    }
+    main{
+        min-height: 170px;
+    }
     main button{
-        margin: 15px 1px 3px 1px;   
+        margin: 1px;   
     }
 }
