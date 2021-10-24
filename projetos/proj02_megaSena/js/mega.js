@@ -1,7 +1,7 @@
 //declaração de variáveis-----------------------------inicio
 const numerosApostados = [];
 const resultado = [];
-let numeroSorteado = 0;
+//let numeroSorteado = 0;
 let valorAposta;
 let qtdAcertos = 0;
 //declaração de variáveis--------------------------------fim
@@ -11,14 +11,15 @@ btnApostar.disabled = true;
 
 //chamando a função que sorteia os números------------inicio
 sortearNumeros();
-//chamando a função que sorteia os números---------------fim
+//chamando a função que sorteia os números---------------fim  
 
 
-//funções --------------------------------------------inicio
+//#funções --------------------------------------------inicio
 function sortearNumeros(){
   for(let i = 0; i < 6; i++) {    
        // Sorteando os números do jogo
-      let numeroSorteado = Math.round(Math.random() * 59 + 1);
+       console.log(Math.round(Math.random() * 59 + 1));
+       let numeroSorteado = Math.round(Math.random() * 59 + 1);
        
         // verifica se o numero sorteado exixte na lista, enquanto exixtir ele vai ficar sorteando um novo número
       while(resultado.includes(numeroSorteado)){
@@ -58,11 +59,14 @@ function desabilitarNumeroEscolhido(numero){
 function apostar(){
      //fazer a aposta -- comparar os números sorteados com os apostados
      for(i = 0; i < numerosApostados.length; i++){
-          for(j = 0; j < resultado.length; j++){
-               if(numerosApostados[i] == resultado[j]){
-                    qtdAcertos++
-               }
+          if(resultado.includes(numerosApostados[i])){
+               qtdAcertos++
           }
+          // for(j = 0; j < resultado.length; j++){
+          //      if(numerosApostados[i] == resultado[j]){
+          //           qtdAcertos++
+          //      }
+          // }
      }
      //  mostrar o resultado
      const divResultado = document.getElementById("resultado");
@@ -124,4 +128,4 @@ function desabilitaTodosNumeros(){
           document.getElementById("num_" + i).disabled = true;
      }
 }
-//funções ----------------------------------------------fim
+//#funções ----------------------------------------------fim
