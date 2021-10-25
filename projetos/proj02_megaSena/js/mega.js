@@ -79,6 +79,9 @@ function apostar(){
      btnApostar.disabled = true;
 
      desabilitaTodosNumeros()
+
+     //habilitar o botão reiniciar
+     document.getElementById("btnReiniciar").style.display = 'inline';
 }
 
 function valorDaAposta(){
@@ -128,4 +131,10 @@ function desabilitaTodosNumeros(){
           document.getElementById("num_" + i).disabled = true;
      }
 }
+
+
+var btn = document.querySelector("#btnReiniciar");
+btn.addEventListener("click", function(){
+     location.reload();
+});
 //#funções ----------------------------------------------fim

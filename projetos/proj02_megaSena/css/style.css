@@ -12,6 +12,7 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     min-height:100vh;
 }
 
@@ -56,7 +57,7 @@ main button:hover:disabled{
     cursor: not-allowed;
 }
 
-#btnApostar{
+.btn{
     padding: 5px;
     height: 80px;
     margin: 15px;
@@ -72,11 +73,11 @@ main button:hover:disabled{
     box-shadow: 0 4px 8px  0 rgba( 0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 }
 
-#btnApostar:hover{
+.btn:hover{
     border: 2px solid #008000;
 }
 
-#btnApostar:hover:disabled{
+.btn:hover:disabled{
     cursor: not-allowed;
 }
 
@@ -135,4 +136,10 @@ footer .valor{
     main button{
         margin: 1px;   
     }
+}
+
+#btnReiniciar{
+    display: none;
+    /*document.getElementById("idBotao").style.display = 'none';
+    document.getElementById("idBotao").style.display = 'inline';*/
 }
