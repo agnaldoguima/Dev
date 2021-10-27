@@ -14,6 +14,7 @@ body{
     align-items: center;
     flex-direction: column;
     min-height:100vh;
+    background-color: var(--bg-color);
 }
 
 .container{
@@ -69,7 +70,8 @@ main button:hover:disabled{
     font-weight: 500;
     border-radius: 6px;
     border: 1px solid #008000;
-    color:#008000;
+    color:var(--font-color);
+    background-color: var(--btn-color-bg);
     box-shadow: 0 4px 8px  0 rgba( 0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 }
 
@@ -142,33 +144,39 @@ footer .valor{
     }
 }
 
-.dark{
-    background-color: #2f3136;
-}
 
-.dark .container{
-    background-color: #0f1118;
-}
-
-.dark .btn{
-    background-color: #2f3136;
-    color: #fff;
-}
-
-
-/* switch */
+/* mudar o tema */
 .alternarTema{
-    width: 400px;
     text-align: right;
+    width: 400px;
+    margin-bottom: 5px;
 }
-/* The switch - the box around the slider */
+:root {
+    /* --bg-color: #fec150; */
+    --bg-color: #FFFFFF;
+    --font-color: #008000;
+    --title-color: #0067e6;
+    --title-background: #fff;
+    --main-border: 1px solid rgba(255, 255, 255, 0.4);
+    --main-bg: rgba(255, 255, 255, 0.4);
+  }
+
+  [data-theme="dark"] {
+    --bg-color: #2f3136;
+    --btn-color-bg: #63656a;
+    --font-color: #FFFFFF;
+    --title-color: #fec150;
+    --title-background: #222;
+    --main-border: 1px solid rgba(255, 255, 255, 0.2);
+    --main-bg: rgba(25, 25, 25, 0.4);
+  }
+
+  /* The switch - the box around the slider */
 .switch {
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
-    margin-bottom: 10px;
-    text-align: right;
   }
   
   /* Hide default HTML checkbox */
@@ -225,6 +233,5 @@ footer .valor{
   .slider.round:before {
     border-radius: 50%;
   }
-
 
 
