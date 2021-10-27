@@ -137,4 +137,8 @@ var btn = document.querySelector("#btnReiniciar");
 btn.addEventListener("click", function(){
      location.reload();
 });
+
+function mudaTema(){
+     document.body.classList.toggle("dark")
+}
 //#funções ----------------------------------------------fim
