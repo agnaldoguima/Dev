@@ -46,22 +46,20 @@ header .redesSociais img:hover{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   margin-top: 50px;
 }
 
 .box {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: start;
   flex-direction: column;
-  text-align: center;
   margin: 30px;
-  padding: 0px;
   border-radius: 10px 10px 0px 0px;
   color:DimGray;
-  width: 350px;
-  height: 400px;
+  width: 300px;
+  height: 310px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: #ffffff;
 }
@@ -71,13 +69,14 @@ header .redesSociais img:hover{
 }
 
 .box h3 {
+  text-align: center;
   padding: 3px;
   color: #e31e26;
   font-weight: 800;
 }
 
-.box p {
-  padding: 3px;
+.box p {  
+  text-align: center;
   font-size: 14px;
   font-weight: 800;
   padding: 10px;
@@ -89,7 +88,7 @@ header .redesSociais img:hover{
 }
 
 .box img{
-  width:100%; 
+  width:300px; 
   border-radius: 10px 10px 0px 0px;
 }
 
