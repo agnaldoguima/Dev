@@ -211,22 +211,25 @@ const palavras = [
     }
 ];
 
+
 //sorteia a palavra secreta e sua categoria
 criarPalavraSecreta();
 function criarPalavraSecreta(){
     // gera um indice aleatório entre 0 e 50 para servir de apoio na escolha da palavra que está na lista
-    const indexPalavra = parseInt(Math.random() * 51 );
+    const indexPalavra = parseInt(Math.random() * palavras.length);
     // passa o indice sorteado para a lista referenciar a palavra Secreta
     palavraSecretaSorteada = palavras[indexPalavra].nome;
     palavraCategoria = palavras[indexPalavra].categoria;
+    console.log(palavraSecretaSorteada)
 }
 
 // cria uma lista com a palavra secreta separado na lista por cada letra
-palavraSecretaPorLetra = palavraSecretaSorteada.split('');  
+//palavraSecretaPorLetra = palavraSecretaSorteada.split('');  
 
 // monta a quantidade de espaços da palavra na tela
-montarPalavraNaTela(palavraSecretaPorLetra)
-function montarPalavraNaTela(palavraSeCretaSorteada){
+// montarPalavraNaTela(palavraSecretaPorLetra)
+montarPalavraNaTela()
+function montarPalavraNaTela(){
     const categoria = document.getElementById("categoria");
     categoria.innerHTML = palavraCategoria;
 
@@ -242,14 +245,17 @@ function montarPalavraNaTela(palavraSeCretaSorteada){
               palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letras'>"+ listaDinamica[i] +"</div>"   
          }
     }
+} 
+function mudarStyleLetra(tecla){
+    document.getElementById(tecla).style.background="#C71585"   
+    document.getElementById(tecla).style.color="#FFFFFF"  
 }
-
 function verificaLetraEscolhida(letra){
     if(tentativas > 0){
          if(verificaSeLetraNaoFoiDigitada(letra)  == 0) { // lista vazia e primeira letra escolhida   
              mudarStyleLetra("tecla-" + letra) 
              comparaListas(letra)
-             montarPalavraNaTela(palavraSecretaSorteada)
+             montarPalavraNaTela()
          }
          else if(verificaSeLetraNaoFoiDigitada(letra) == 1){//letra repetida
             abreModal("OPS!", "A letra " + letra + " ja foi usada.")   
@@ -258,7 +264,7 @@ function verificaLetraEscolhida(letra){
              letrasDigitadas.push(letra);
              mudarStyleLetra("tecla-" + letra)
              comparaListas(letra)
-             montarPalavraNaTela(palavraSecretaSorteada)
+             montarPalavraNaTela()
          }
     } 
 }
@@ -272,9 +278,9 @@ function verificaSeLetraNaoFoiDigitada(letra){
         for(i = 0; i <= letrasDigitadas.length; i++){
              if(letra == letrasDigitadas[i]){
                   // se o retorno for maior ou igual a 0 existe no array o valor procurado
-                  if(function jaTemLetra() {
-                        return  (letrasDigitadas.indexOf(letra) >= 0);
-                  }){
+                  if(function jaTemLetra() { 
+                      return  (letrasDigitadas.indexOf(letra) >= 0);
+                    }){
                     return response =  1
                   }     
              }
@@ -285,12 +291,8 @@ function verificaSeLetraNaoFoiDigitada(letra){
    } 
    return response;
 }
-function mudarStyleLetra(tecla){
-    document.getElementById(tecla).style.background="#C71585"   
-    document.getElementById(tecla).style.color="#FFFFFF"  
-}
 function comparaListas(letra){
-    const pos = palavraSecretaPorLetra.indexOf(letra);
+    const pos = palavraSecretaSorteada.indexOf(letra);
     if(pos < 0){// significa que a letra não existe na palavra secreta
          tentativas--
          carregaImagenForca();
@@ -300,24 +302,23 @@ function comparaListas(letra){
          }
     }
     else{
-         for(i = 0; i < palavraSecretaPorLetra.length; i++){
-             if(palavraSecretaPorLetra[i] == letra){
-                  listaDinamica[i] = palavraSecretaPorLetra[i];      
+         for(i = 0; i < palavraSecretaSorteada.length; i++){
+             if(palavraSecretaSorteada[i] == letra){
+                  listaDinamica[i] = palavraSecretaSorteada[i];      
              }    
         }   
     } 
-    let vitoria = "sim";
-    for (let i = 0; i < palavraSecretaPorLetra.length; i++) {
-         if (listaDinamica[i] != palavraSecretaPorLetra[i]) { 
-              vitoria = "não"
+    let vitoria = true;
+    for (let i = 0; i < palavraSecretaSorteada.length; i++) {
+         if (listaDinamica[i] != palavraSecretaSorteada[i]) { 
+              vitoria = false
          }
     }
-    if(vitoria == "sim"){
+    if(vitoria == true){
         abreModal("PARABÉNS!", "Você venceu <br>") 
          tentativas = 0;
     }   
 }
-
 function carregaImagenForca()
 {
     switch(tentativas){
@@ -346,7 +347,6 @@ function carregaImagenForca()
     }
     
 }
-
 function abreModal(titulo, mensagem) {
     let modalTitle = document.getElementById("exampleModalLongTitle")
     modalTitle.innerText = titulo;
