@@ -1,4 +1,4 @@
-let letrasDigitadas = [];
+// let letrasDigitadas = [];
 let palavraSecretaSorteada;
 let palavraCategoria;
 let tentativas = 6;
@@ -251,46 +251,52 @@ function mudarStyleLetra(tecla){
     document.getElementById(tecla).style.color="#FFFFFF"  
 }
 function verificaLetraEscolhida(letra){
+    document.getElementById("tecla-" + letra).disabled = true;
     if(tentativas > 0){
-         if(verificaSeLetraNaoFoiDigitada(letra)  == 0) { // lista vazia e primeira letra escolhida   
-             mudarStyleLetra("tecla-" + letra) 
-             comparaListas(letra)
-             montarPalavraNaTela()
-         }
-         else if(verificaSeLetraNaoFoiDigitada(letra) == 1){//letra repetida
-            abreModal("OPS!", "A letra " + letra + " ja foi usada.")   
-         }
-         else{//letra nova
-             letrasDigitadas.push(letra);
-             mudarStyleLetra("tecla-" + letra)
-             comparaListas(letra)
-             montarPalavraNaTela()
-         }
+        mudarStyleLetra("tecla-" + letra) 
+        comparaListas(letra)
+        montarPalavraNaTela()
+
+        //  if(verificaSeLetraNaoFoiDigitada(letra)  == 0) { // lista vazia e primeira letra escolhida   
+        //      mudarStyleLetra("tecla-" + letra) 
+        //      comparaListas(letra)
+        //      montarPalavraNaTela()
+        //  }
+        //  else if(verificaSeLetraNaoFoiDigitada(letra) == 1){//letra repetida
+        //     abreModal("OPS!", "A letra " + letra + " ja foi usada.")   
+        //  }
+        //  else{//letra nova
+        //      letrasDigitadas.push(letra);
+        //      mudarStyleLetra("tecla-" + letra)
+        //      comparaListas(letra)
+        //      montarPalavraNaTela()
+        //  }
     } 
 }
-function verificaSeLetraNaoFoiDigitada(letra){
-   response = 0;
-   if(letrasDigitadas.length < 1){
-        letrasDigitadas.push(letra);       
-        response =  0;
-   }
-   else{
-        for(i = 0; i <= letrasDigitadas.length; i++){
-             if(letra == letrasDigitadas[i]){
-                  // se o retorno for maior ou igual a 0 existe no array o valor procurado
-                  if(function jaTemLetra() { 
-                      return  (letrasDigitadas.indexOf(letra) >= 0);
-                    }){
-                    return response =  1
-                  }     
-             }
-             else{
-                  response =  2;
-             }
-        }
-   } 
-   return response;
-}
+// function verificaSeLetraNaoFoiDigitada(letra){
+//    response = 0;
+//    if(letrasDigitadas.length < 1){
+//         letrasDigitadas.push(letra);       
+//         response =  0;
+//    }
+//    else{
+//         for(i = 0; i <= letrasDigitadas.length; i++){
+//              if(letra == letrasDigitadas[i]){
+//                   // se o retorno for maior ou igual a 0 existe no array o valor procurado
+//                   if(function jaTemLetra() { 
+//                       return  (letrasDigitadas.indexOf(letra) >= 0);
+//                     }){
+//                     return response =  1
+//                   }     
+//              }
+//              else{
+//                   response =  2;
+//              }
+//         }
+//    } 
+//    return response;
+// }
+
 function comparaListas(letra){
     const pos = palavraSecretaSorteada.indexOf(letra);
     if(pos < 0){// significa que a letra não existe na palavra secreta
