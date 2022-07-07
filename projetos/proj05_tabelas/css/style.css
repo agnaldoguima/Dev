@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2? family= Anek+Malayalam:wght@300 & display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Anek Malayalam', sans-serif;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+}
+
+table{
+    width: 100vw;
+    text-align: center;
+    
+}
+
+.header{
+    background-color: #10502f;
+    color: #ffffff;
+    box-shadow: 0px 2px 4px #888888;
+    border-collapse: collapse;
+    font-size: 0.75em;
+    position: fixed;
+}
+
+#logo td{
+    height: 48px;
+    padding-top: 4px;;
+}
+
+td{
+    height: 48px;
+    width: 70px;
+    color: #9db7a9;
+}
+
+.nav-conteudo-lateral{
+    width: 320px;
+}
+
+.nav-destacado{
+    border-bottom: 3px solid #ffffff;
+    color: #ffffff;
+}
+
+.nav-destacado:hover{
+    background-color: #0e482a;
+    cursor:pointer;
+}
+
+.tabela-brasileirao{
+    position: absolute;
+    margin-top: 108px;
+    z-index: -1;
+    border: 1px solid #e9eaeb;
+    border-top: none;
+    border-bottom: none;
+    width: 40vw;
+    margin-left: 30%;
+    
+    border-collapse: collapse;
+    font-size: 0.75em;
+    background-color: #ffffff;
+}
+
+#tabela-brasileirao-header{
+    padding: 15px;
+    padding-left: 20px;
+    background-color: #f1f3f4;
+    text-align: left;
+    color: #70758d;
+}
+
+#ano{
+    font-weight: 600;
+    color: #4285f4;
+}
+
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+
+.tabela-brasileirao th{
+    border-top: 1px solid #dadec0;
+    font-weight: 100;
+    color: #70758d;
+    padding: 4px;
+    height: 35px;
+}
+
+.tabela-brasileirao td{
+    border-top: 1px solid #dadec0;
+    font-weight: 100;
+    color: #000000;
+    padding: 4px;
+    height: 40px;
+    font-size: 1.2em;
+}
+
+.tabela-brasileirao img{
+    width: 25px;
+}
+
+.tabela-colunas-bordas{ 
+    border-top: none !important;
+}
+
+.titulo-clube{
+    width: 50%;
+    text-align: left;
+}
+
+.titulo-ultimas-cinco{
+    width: 20%;
+}
+
+.titulo-ultimas-cinco img{
+    width: 17px;
+}
+
+.borda-azul{
+    border-left: 3px solid #4285f4;
+}
+
+.borda-laranja{
+    border-left: 3px solid #fa7b17;
+}
+
+.borda-verde{
+    border-left: 3px solid #34a853;
+}
+
+.borda-vermelho{
+    border-left: 3px solid #ea4335;
+}
+
+.legenda table{
+    width: 40vw;
+    margin: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e9eaeb;
+    border-radius: 3px;
+    padding: 15px;
+    text-align: left;
+    background-color: #f8f9fa;
+}
+
+.legenda th{
+    border-top: none;
+    font-size: 1.1em;
+    color: #000000;
+    font-weight: 700;
+}
+
+.legenda img{
+    width: 10px;
+}
+
+.legenda td{
+    border-top: none;
+    font-size: 1em;
+    height: 3px;
+    width: 54%;
+}
+
+

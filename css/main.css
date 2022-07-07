@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 * {
   margin:0;
   padding:0;
@@ -29,9 +30,16 @@ header .imgAvatar{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+header .nomeAutor{
+  margin-top: -80px;
+  font-family: 'Lobster', cursive;
+  color: #fff;
+  font-size: 3em;
+}
+
 header .redesSociais{
   margin-top: -90px;
-  }
+}
 
 header .redesSociais img{
   max-height: 20px;
@@ -59,7 +67,7 @@ header .redesSociais img:hover{
   border-radius: 10px 10px 0px 0px;
   color:DimGray;
   width: 300px;
-  height: 310px;
+  height: 340px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: #ffffff;
 }
@@ -122,6 +130,10 @@ footer{
   }
 
   header .redesSociais{
+    display: none;
+  }
+
+  header .nomeAutor{
     display: none;
   }
 }
